@@ -19,7 +19,7 @@ backend:
   phases:
     preBuild:
       commands:
-        - cd Vision AI Backend.py
+        - cd src/Backend.py
         - pip install -r requirements.txt
     build:
       commands:
