@@ -1,0 +1,33 @@
+version: 1B
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd frontend
+        - npm install
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: frontend/dist
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - frontend/node_modules/**
+backend:
+  phases:
+    preBuild:
+      commands:
+        - cd backend
+        - pip install -r requirements.txt
+    build:
+      commands:
+        - python main.py
+  artifacts:
+    baseDirectory: backend
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - backend/.venv/**
