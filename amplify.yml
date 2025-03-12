@@ -3,13 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd Vision AI Avatar Frontend.py
+        - cd Frontend.py
         - npm install
     build:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: frontend/dist
+    baseDirectory: main
     files:
       - "**/*"
   cache:
@@ -19,13 +19,13 @@ backend:
   phases:
     preBuild:
       commands:
-        - cd src/Backend.py
+        - cd Backend.py
         - pip install -r requirements.txt
     build:
       commands:
         - python main.py
   artifacts:
-    baseDirectory: backend
+    baseDirectory: main
     files:
       - "**/*"
   cache:
