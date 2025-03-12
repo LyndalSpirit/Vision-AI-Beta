@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd frontend
+        - cd Vision AI Avatar Frontend.py
         - npm install
     build:
       commands:
